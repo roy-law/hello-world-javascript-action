@@ -7,8 +7,8 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: actions/hello-world-javascript-action@v2
+        uses: roy-law/hello-world-javascript-action@v3
         with:
           who-to-greet: 'Roy the Developer'
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.timea }}"
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
