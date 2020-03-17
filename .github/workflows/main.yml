@@ -1,15 +1,14 @@
 on: [push]
 
 jobs:
-    hello_world_jon:
-        runs-on: ubuntu-latest
-        name: A job to say hello
-        steps:
-            - name: Hello world action step 
-              id: hello
-              uses: roy-law/hello-world-javascript-action@v2
-              with:
-                  who-to-greet: 'Roy the Developer'
-            - name: Get the output time
-              run: echo "The time was ${{ steps.hello.outputs.timea }}"
-
+  hello_world_jon:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: actions/hello-world-javascript-action@v2
+        with:
+          who-to-greet: 'Roy the Developer'
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.timea }}"
